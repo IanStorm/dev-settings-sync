@@ -8,7 +8,7 @@ import common
 def _get_non_matching_files():
 	non_matching_files = []
 	for rel_filepath in common.get_overlapping_files():
-		file_1 = os.path.join(common.DEV_ENV_DIR, rel_filepath)
+		file_1 = os.path.join(common.SYNC_DIR, rel_filepath)
 		file_2 = os.path.join(common.MNT_DIR, rel_filepath)
 		if not filecmp.cmp(file_1, file_2):
 			non_matching_files.append(rel_filepath)

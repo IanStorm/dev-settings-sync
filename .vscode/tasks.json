@@ -4,7 +4,7 @@
 		{
 			"label": "build",
 			"type": "shell",
-			"command": "docker build -t dev-env .",
+			"command": "docker build -t dev-settings-sync .",
 			"problemMatcher": [],
 			"group": {
 				"kind": "build",
