@@ -16,4 +16,4 @@ RUN ln -s /home/dev/check.py /usr/bin/check \
 	&& ln -s /home/dev/sync.py /usr/bin/sync
 USER dev
 
-WORKDIR /
+WORKDIR /mnt/
