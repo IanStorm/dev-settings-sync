@@ -6,8 +6,6 @@ on:
       - main
   pull_request:
 
-env:
-
 jobs:
   check-job:
     runs-on: ianstorm/dev-settings-sync
