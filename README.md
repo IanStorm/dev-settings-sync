@@ -10,6 +10,42 @@ Syncs settings files across different repositories.
 **🐳 Make sure you have installed *Docker*.**
 
 
+## How to use in "production"? 👨‍💼 👩‍💼
+
+Files to sync are determined by their *relative file path*.
+(Relative with respect to the project root.)
+
+
+### Manual execution 🔧
+
+1. Follow ["How to get a pre-built Docker image?"](#-how-to-get-a-pre-built-docker-image-☁️)
+2. Run the Docker image:
+	* either run the *check*:
+```
+$	docker run
+		-t
+		-v ${PWD}/:/mnt/
+		ianstorm/dev-settings-sync
+		check
+```
+*
+	* or run the *sync*:
+```
+$	docker run
+		-t
+		-v ${PWD}/:/mnt/
+		ianstorm/dev-settings-sync
+		sync
+```
+
+
+### Automatic execution 🤖
+
+It is highly recommended to include this project in your CI.
+The simplest approach is to add an empty `.github/workflows/dev-settings-sync.yml` to the consuming repository.
+Then run the *sync*, see [manual execution](#-manual-execution-🔧).
+
+
 ## How to develop, i.e. how to change the flows? 👨‍💻 👩‍💻
 
 Make sure you have installed *Visual Studio Code*.
