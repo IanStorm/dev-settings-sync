@@ -9,7 +9,7 @@ on:
 jobs:
   check-job:
     runs-on: ianstorm/dev-settings-sync
-    if: github.event_name = 'push'
+    if: github.event_name == 'push'
 
     steps:
       - uses: actions/checkout@v2
