@@ -1,0 +1,20 @@
+name: Are dev settings synced?
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+env:
+
+jobs:
+  check-job:
+    runs-on: ianstorm/dev-settings-sync
+    if: github.event_name = 'push'
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Run check
+        run: check
