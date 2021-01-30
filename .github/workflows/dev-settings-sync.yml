@@ -14,5 +14,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Run check
+      - name: Docker Pull
+        run: docker pull ianstorm/dev-settings-sync
+
+      - name: Docker Run check
         run: docker run -t -v ${PWD}/:/mnt/ ianstorm/dev-settings-sync check
