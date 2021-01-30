@@ -12,10 +12,10 @@ def get_overlapping_files():
 	return overlapping_files
 
 def _get_sync_rel_filepaths():
-	dev_env_rel_filepaths = []
+	sync_rel_filepaths = []
 	for subdir, dirs, files in os.walk(SYNC_DIR):
 		for filename in files:
 			filepath = os.path.join(subdir, filename)
 			rel_filepath = os.path.join('.', os.path.relpath(filepath, SYNC_DIR))
-			dev_env_rel_filepaths.append(rel_filepath)
-	return dev_env_rel_filepaths
+			sync_rel_filepaths.append(rel_filepath)
+	return sync_rel_filepaths
