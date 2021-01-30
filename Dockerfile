@@ -12,8 +12,8 @@ COPY ./home/dev/ /home/dev/
 COPY ./opt/dev-settings-sync/ /opt/dev-settings-sync/
 
 USER root
-RUN ln -s /home/dev/check.py ./usr/bin/check \
-	&& ln -s /home/dev/sync.py ./usr/bin/sync
+RUN ln -s /home/dev/check.py /usr/bin/check \
+	&& ln -s /home/dev/sync.py /usr/bin/sync
 USER dev
 
 WORKDIR /
