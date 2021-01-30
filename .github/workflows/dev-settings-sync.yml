@@ -8,11 +8,11 @@ on:
 
 jobs:
   check-job:
-    runs-on: ianstorm/dev-settings-sync
+    runs-on: ubuntu-latest
     if: github.event_name == 'push'
 
     steps:
       - uses: actions/checkout@v2
 
       - name: Run check
-        run: check
+        run: docker run -t -v ${PWD}/:/mnt/ ianstorm/dev-settings-sync check
