@@ -11,6 +11,7 @@
 	"plugins": [
 		"@typescript-eslint"
 	],
+	"root": true,
 	"rules": {
 		"@typescript-eslint/array-type": [ "error", { "default": "generic" } ],
 		"@typescript-eslint/member-ordering": [
@@ -26,7 +27,7 @@
 		"@typescript-eslint/no-shadow": "error",
 		"@typescript-eslint/prefer-readonly": "error",
 		"@typescript-eslint/prefer-readonly-parameter-types": "error",
-		"comma-dangle": [ "error", "always" ],
+		"comma-dangle": [ "error", "always-multiline" ],
 		"indent": [ "error", "tab" ],
 		"lines-between-class-members": [ "error", "always" ],
 		"max-len": [ "error", {
@@ -42,7 +43,6 @@
 		"prefer-const": "error",
 		"semi": [ "error", "always" ],
 		"semi-spacing": "error",
-		"semi-style": [ "error", "last" ],
 		"sort-imports": "error",
 		"unicode-bom": [ "error", "never" ]
 	}
