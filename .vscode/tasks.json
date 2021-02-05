@@ -10,6 +10,21 @@
 				"kind": "build",
 				"isDefault": true
 			}
+		},
+		{
+			"label": "Docker pull",
+			"type": "shell",
+			"command": "docker pull ianstorm/dev-settings-sync",
+			"problemMatcher": []
+		},
+		{
+			"label": "Sync",
+			"type": "shell",
+			"command": "docker run -t -v ${PWD}/:/mnt/ ianstorm/dev-settings-sync sync",
+			"problemMatcher": [],
+			"dependsOn": [
+				"Docker pull"
+			]
 		}
 	]
 }
