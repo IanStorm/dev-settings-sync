@@ -18,7 +18,7 @@
 			"problemMatcher": []
 		},
 		{
-			"label": "Sync",
+			"label": "sync",
 			"type": "shell",
 			"command": "docker run -t -v ${PWD}/:/mnt/ ianstorm/dev-settings-sync sync",
 			"problemMatcher": [],
