@@ -1,25 +1,18 @@
+#
+# 🛑 Think twice before editing this file! 🛑
+# ⚠️ This file is maintained via https://github.com/IanStorm/dev-settings-sync. ⚠️
+#
 name: Docker
 
 on:
   push:
-    # Publish `main` as Docker `latest` image.
     branches:
       - main
 
-    # Publish `v1.2.3` tags as releases.
-    tags:
-      - v*
-
-  # Run tests for any PRs.
-  pull_request:
-
 env:
   DOCKERHUB_USERNAME: ianstorm
-  IMAGE_NAME: image
 
 jobs:
-  # Push image to GitHub Packages.
-  # See also https://docs.docker.com/docker-hub/builds/
   push:
     runs-on: Ubuntu-20.04
     if: github.event_name == 'push'
@@ -27,13 +20,16 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Build image
-        run: docker build . --file Dockerfile --tag $IMAGE_NAME
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
 
       - name: Log into registry
         run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u $DOCKERHUB_USERNAME --password-stdin
 
-      - name: Push image
+      - name: Docker buildx and push
         run: |
           IMAGE_ID=${{ github.repository }}
 
@@ -52,5 +48,9 @@ jobs:
           echo IMAGE_ID=$IMAGE_ID
           echo VERSION=$VERSION
 
-          docker tag $IMAGE_NAME $IMAGE_ID:$VERSION
-          docker push $IMAGE_ID:$VERSION
+          docker buildx build \
+            --platform linux/amd64,linux/arm/v7,linux/arm/v6l \
+            --output "type=image,push=true" \
+            --tag $IMAGE_ID:$VERSION \
+            --file Dockerfile \
+            .
