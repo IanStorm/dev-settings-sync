@@ -12,7 +12,8 @@
 		"project": "package.json"
 	},
 	"plugins": [
-		"@typescript-eslint"
+		"@typescript-eslint",
+		"simple-import-sort"
 	],
 	"root": true,
 	"rules": {
@@ -46,7 +47,8 @@
 		"prefer-const": "error",
 		"semi": [ "error", "always" ],
 		"semi-spacing": "error",
-		"sort-imports": "error",
+		"simple-import-sort/exports": "error",
+		"simple-import-sort/imports": "error",
 		"unicode-bom": [ "error", "never" ]
 	}
 }
