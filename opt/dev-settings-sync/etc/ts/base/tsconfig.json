@@ -6,6 +6,7 @@
 	"compilerOptions": {
 		"alwaysStrict": true,
 		"esModuleInterop": true,
+		"incremental": true,
 		"module": "commonjs",
 		"moduleResolution": "node",
 		"noEmitOnError": true,
@@ -16,6 +17,7 @@
 		"strictFunctionTypes": true,
 		"strictNullChecks": true,
 		"strictPropertyInitialization": true,
-		"target": "es2015" // where "es2015"="es6"
+		"target": "es2015", // where "es2015"="es6"
+		"tsBuildInfoFile": "../../../.tsbuildinfo"
 	}
 }
