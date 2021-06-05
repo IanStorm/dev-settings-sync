@@ -12,6 +12,7 @@
 		"moduleResolution": "Node",
 		"noEmitOnError": true,
 		"noImplicitAny": true,
+		"noImplicitOverride": true,
 		"noImplicitReturns": true,
 		"noImplicitThis": true,
 		"removeComments": true,
