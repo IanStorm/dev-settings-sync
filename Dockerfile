@@ -1,9 +1,9 @@
 # ↓ Main stage
-FROM alpine:3.14
+FROM alpine:3.15
 
 USER root
 
-RUN apk add python3
+RUN apk add python3=~3
 
 RUN adduser -D dev
 USER dev
