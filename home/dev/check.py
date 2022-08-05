@@ -15,6 +15,7 @@ def _get_non_matching_files():
 	return non_matching_files
 
 def main():
+	common.assert_input()
 	non_matching_files = _get_non_matching_files()
 	if len(non_matching_files) != 0:
 		for rel_filepath in non_matching_files:

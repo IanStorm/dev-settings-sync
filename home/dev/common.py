@@ -1,7 +1,14 @@
 import os
+import sys
 
 MNT_DIR = u'/mnt/'
 SYNC_DIR = u'/opt/dev-settings-sync/'
+
+def assert_input():
+	overlapping_files = get_overlapping_files()
+	if len(overlapping_files) == 0:
+		print(u'Error: "dev-settings-sync" did not find overlapping files.')
+		sys.exit(1)
 
 def get_overlapping_files():
 	overlapping_files = []

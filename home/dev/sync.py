@@ -6,6 +6,7 @@ import sys
 import common
 
 def main():
+	common.assert_input()
 	for rel_filepath in common.get_overlapping_files():
 		src_filepath = os.path.join(common.SYNC_DIR, rel_filepath)
 		dst_filepath = os.path.join(common.MNT_DIR, rel_filepath)
