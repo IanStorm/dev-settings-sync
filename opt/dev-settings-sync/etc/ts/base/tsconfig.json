@@ -23,6 +23,7 @@
 		"strictNullChecks": true,
 		"strictPropertyInitialization": true,
 		"target": "ES2015", // where "ES2015"="ES6"
-		"tsBuildInfoFile": "../../../.tsbuildinfo"
+		"tsBuildInfoFile": "../../../.tsbuildinfo",
+		"useUnknownInCatchVariables": true
 	}
 }
