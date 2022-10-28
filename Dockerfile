@@ -1,5 +1,5 @@
 # ↓ Main stage
-FROM alpine:3.15
+FROM alpine:3.16.2
 
 USER root
 
