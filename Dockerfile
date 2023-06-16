@@ -9,13 +9,13 @@ RUN adduser -D dev
 USER dev
 
 COPY ./home/dev/ /home/dev/
-COPY ./opt/dev-settings-sync/ /opt/dev-settings-sync/
-
 USER root
 RUN chmod +x /home/dev/check.py \
 	&& chmod +x /home/dev/sync.py
 RUN ln -s /home/dev/check.py /usr/bin/check \
 	&& ln -s /home/dev/sync.py /usr/bin/sync
 USER dev
+
+COPY ./opt/dev-settings-sync/ /opt/dev-settings-sync/
 
 WORKDIR /
