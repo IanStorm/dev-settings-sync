@@ -52,6 +52,7 @@ Make sure you have installed *Visual Studio Code*.
 
 1. Clone this repository.
 2. `cd` inside the cloned folder.
+2. Install the recommended extensions.
 2. Build the Docker image: Run the vscode task `build`.
 
 

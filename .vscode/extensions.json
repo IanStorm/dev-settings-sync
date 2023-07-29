@@ -1,6 +1,7 @@
 {
 	"recommendations": [
 		"editorconfig.editorconfig",
-		"ms-vscode-remote.remote-wsl"
-	]
+		"ms-vscode-remote.remote-wsl",
+		"redhat.vscode-yaml",
+	],
 }
