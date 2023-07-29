@@ -46,7 +46,7 @@ The simplest approach is to add an empty `.github/workflows/dev-settings-sync.ym
 Then run the *sync*, see [manual execution](#-manual-execution-🔧).
 
 
-## How to develop, i.e. how to change the flows? 👨‍💻 👩‍💻
+## How to develop? 👨‍💻 👩‍💻
 
 Make sure you have installed *Visual Studio Code*.
 
