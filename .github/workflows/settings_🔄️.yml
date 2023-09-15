@@ -14,5 +14,5 @@ on:
   pull_request:
 
 jobs:
-  check-job:
+  Settings:
     uses: IanStorm/reusable-workflows/.github/workflows/settings.yml@main
