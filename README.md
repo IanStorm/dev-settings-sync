@@ -1,4 +1,4 @@
-# Development Settings Sync
+# Development Settings Sync 💻🔄☁️
 
 [![GitHub Actions](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2FIanStorm%2Fdev-settings-sync%2Fbadge%3Fref%3Dmain&style=flat&label=build&logo=none)](https://actions-badge.atrox.dev/IanStorm/dev-settings-sync/goto?ref=main)
 [![Docker Pulls](https://img.shields.io/docker/pulls/ianstorm/dev-settings-sync)](https://hub.docker.com/r/ianstorm/dev-settings-sync)
@@ -42,7 +42,7 @@ $	docker run
 ### Automatic execution 🤖
 
 It is highly recommended to include this project in your CI.
-The simplest approach is to add an empty `.github/workflows/dev-settings-sync.yml` to the consuming repository.
+The simplest approach is to add an empty `.github/workflows/settings_🔄️.yml` to the consuming repository.
 Then run the *sync*, see [manual execution](#-manual-execution-🔧).
 
 

@@ -1,0 +1,26 @@
+#
+# 🛑 Think twice before editing this file! 🛑
+# ⚠️ This file is maintained via https://github.com/IanStorm/dev-settings-sync. ⚠️
+#
+
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+
+name: Docker
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '0 22 * * 5' # weekly, i.e. every Friday at 10pm
+
+env:
+  DOCKERHUB_USERNAME: ianstorm
+
+jobs:
+  docker-job:
+    uses: IanStorm/reusable-workflows/.github/workflows/docker.yml@main
+    with:
+      dockerhub_username: $DOCKERHUB_USERNAME
+    secrets:
+      dockerhub_token: ${{ secrets.DOCKERHUB_TOKEN }}
