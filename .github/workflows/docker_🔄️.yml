@@ -15,7 +15,7 @@ on:
     - cron: '0 22 * * 5' # weekly, i.e. every Friday at 10pm
 
 jobs:
-  docker-job:
+  Docker:
     uses: IanStorm/reusable-workflows/.github/workflows/docker.yml@main
     with:
       dockerhub_username: ${{ vars.DOCKERHUB_USERNAME }}
