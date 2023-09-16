@@ -15,4 +15,4 @@ on:
 
 jobs:
   Settings:
-    uses: IanStorm/reusable-workflows/.github/workflows/settings.yml@main
+    uses: IanStorm/reusable-workflows/.github/workflows/_settings.yml@main

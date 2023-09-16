@@ -42,7 +42,7 @@ $	docker run
 ### Automatic execution 🤖
 
 It is highly recommended to include this project in your CI.
-The simplest approach is to add an empty `.github/workflows/settings_🔄️.yml` to the consuming repository.
+The simplest approach is to add an empty `.github/workflows/settings.yml` to the consuming repository.
 Then run the *sync*, see [manual execution](#-manual-execution-🔧).
 
 

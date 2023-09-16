@@ -16,7 +16,7 @@ on:
 
 jobs:
   Docker:
-    uses: IanStorm/reusable-workflows/.github/workflows/docker.yml@main
+    uses: IanStorm/reusable-workflows/.github/workflows/_docker.yml@main
     with:
       dockerhub_username: ${{ vars.DOCKERHUB_USERNAME }}
     secrets:
