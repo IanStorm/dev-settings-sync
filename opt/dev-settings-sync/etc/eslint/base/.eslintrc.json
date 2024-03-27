@@ -3,6 +3,8 @@
  * ⚠️ This file is maintained via https://github.com/IanStorm/dev-settings-sync. ⚠️
  */
 {
+	"$schema": "https://json.schemastore.org/eslintrc.json",
+
 	"extends": [
 		"eslint:recommended",
 		"plugin:@typescript-eslint/recommended"
