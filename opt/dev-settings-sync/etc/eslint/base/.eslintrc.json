@@ -14,6 +14,7 @@
 		"project": ["./tsconfig.json"]
 	},
 	"plugins": [
+		"@stylistic/js",
 		"@typescript-eslint",
 		"import",
 		"simple-import-sort"
@@ -22,13 +23,13 @@
 	"rules": {
 		"@typescript-eslint/array-type": [ "error", { "default": "generic" } ],
 
-		"comma-dangle": [ "error", "always-multiline" ],
+		"@stylistic/js/comma-dangle": [ "error", "always-multiline" ],
 
-		"indent": [ "error", "tab" ],
+		"@stylistic/js/indent": [ "error", "tab" ],
 
-		"lines-between-class-members": [ "error", "always" ],
+		"@stylistic/js/lines-between-class-members": [ "error", "always" ],
 
-		"max-len": [ "error", {
+		"@stylistic/js/max-len": [ "error", {
 			"code": 120,
 			"ignoreComments": true
 		} ],
@@ -45,16 +46,16 @@
 
 		"import/no-default-export": "error",
 
-		"no-extra-semi": "error",
+		"@stylistic/js/no-extra-semi": "error",
 
-		"no-multiple-empty-lines": [ "error", { "max": 2 } ],
+		"@stylistic/js/no-multiple-empty-lines": [ "error", { "max": 2 } ],
 
 		"@typescript-eslint/no-require-imports": "error",
 
 		"no-shadow": "off",
 		"@typescript-eslint/no-shadow": "error",
 
-		"no-trailing-spaces": "error",
+		"@stylistic/js/no-trailing-spaces": "error",
 
 		"@typescript-eslint/no-unused-vars": "error",
 
@@ -64,9 +65,9 @@
 
 		"@typescript-eslint/prefer-readonly": "error",
 
-		"semi": [ "error", "always" ],
+		"@stylistic/js/semi": [ "error", "always" ],
 
-		"semi-spacing": "error",
+		"@stylistic/js/semi-spacing": "error",
 
 		"simple-import-sort/exports": "error",
 		"simple-import-sort/imports": "error",
