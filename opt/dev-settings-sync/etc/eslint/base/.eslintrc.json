@@ -23,11 +23,20 @@
 	"rules": {
 		"@typescript-eslint/array-type": [ "error", { "default": "generic" } ],
 
+		"@typescript-eslint/await-thenable": "warn",
+
 		"@stylistic/js/comma-dangle": [ "error", "always-multiline" ],
+
+		"@typescript-eslint/consistent-type-imports": [
+			"warn",
+			{ "prefer": "type-imports", "fixStyle": "separate-type-imports" }
+		],
 
 		"@stylistic/js/indent": [ "error", "tab" ],
 
 		"@stylistic/js/lines-between-class-members": [ "error", "always" ],
+
+		"max-depth": ["warn", { "max": 4 }],
 
 		"@stylistic/js/max-len": [ "error", {
 			"code": 120,
@@ -44,9 +53,17 @@
 			}
 		],
 
+		"import/no-cycle": "warn",
+
 		"import/no-default-export": "error",
 
+		"no-dupe-keys": "warn",
+
+		"no-extra-boolean-cast": "warn",
+
 		"@stylistic/js/no-extra-semi": "error",
+
+		"@typescript-eslint/no-for-in-array": "warn",
 
 		"@stylistic/js/no-multiple-empty-lines": [ "error", { "max": 2 } ],
 
@@ -57,6 +74,10 @@
 
 		"@stylistic/js/no-trailing-spaces": "error",
 
+		"@typescript-eslint/no-unnecessary-condition": "warn",
+
+		"no-unused-expressions": "warn",
+
 		"@typescript-eslint/no-unused-vars": "error",
 
 		"no-var": "error",
@@ -65,6 +86,11 @@
 
 		"@typescript-eslint/prefer-readonly": "error",
 
+		"@stylistic/js/quotes": ["error", "double", { "avoidEscape": true }],
+
+		"require-await": "off",
+		"@typescript-eslint/require-await": "warn",
+
 		"@stylistic/js/semi": [ "error", "always" ],
 
 		"@stylistic/js/semi-spacing": "error",
@@ -72,6 +98,9 @@
 		"simple-import-sort/exports": "error",
 		"simple-import-sort/imports": "error",
 
+		"sort-keys": "warn",
+
 		"unicode-bom": [ "error", "never" ]
-	}
+	},
+	"reportUnusedDisableDirectives": true
 }

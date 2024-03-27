@@ -1,0 +1,16 @@
+/*
+ * 🛑 Think twice before editing this file! 🛑
+ * ⚠️ This file is maintained via https://github.com/IanStorm/dev-settings-sync. ⚠️
+ */
+ {
+	"$schema": "https://json.schemastore.org/eslintrc.json",
+
+	"extends": "../base/.eslintrc.json",
+	"plugins": [
+		"react-hooks"
+	],
+	"root": false,
+	"rules": {
+		"react-hooks/rules-of-hooks": "warn"
+	}
+}
