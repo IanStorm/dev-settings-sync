@@ -90,6 +90,8 @@
 
 		"no-var": "error",
 
+		"@stylistic/js/object-curly-spacing": ["error", "always"],
+
 		"prefer-const": "error",
 
 		"@typescript-eslint/prefer-readonly": "error",
