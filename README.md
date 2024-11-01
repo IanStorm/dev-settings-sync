@@ -21,21 +21,21 @@ Files to sync are determined by their *relative file path*.
 1. Follow ["How to get a pre-built Docker image?"](#-how-to-get-a-pre-built-docker-image-☁️)
 2. Run the Docker image:
 	* either run the *check*:
-```
-$	docker run
-		-t
-		-v ${PWD}/:/mnt/
-		ianstorm/dev-settings-sync
-		check
+```sh
+docker run
+	-t
+	-v ${PWD}/:/mnt/
+	ianstorm/dev-settings-sync
+	check
 ```
 *
 	* or run the *sync*:
-```
-$	docker run
-		-t
-		-v ${PWD}/:/mnt/
-		ianstorm/dev-settings-sync
-		sync
+```sh
+docker run
+	-t
+	-v ${PWD}/:/mnt/
+	ianstorm/dev-settings-sync
+	sync
 ```
 
 
@@ -62,6 +62,6 @@ Make sure you have installed *Visual Studio Code*.
 ### How to get a pre-built Docker image? ☁️
 
 Get the latest Docker image from Docker Hub:
-```
-$	docker pull ianstorm/dev-settings-sync:latest
+```sh
+docker pull ianstorm/dev-settings-sync:latest
 ```
