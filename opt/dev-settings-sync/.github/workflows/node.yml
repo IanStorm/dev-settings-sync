@@ -1,0 +1,17 @@
+#
+# 🛑 Think twice before editing this file! 🛑
+# ⚠️ This file is maintained via https://github.com/IanStorm/dev-settings-sync. ⚠️
+#
+
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+
+name: Node.js 🔄️
+
+on:
+  pull_request:
+  push:
+
+jobs:
+  node-job:
+    name: Node.js
+    uses: IanStorm/reusable-workflows/.github/workflows/_node.yml@main
